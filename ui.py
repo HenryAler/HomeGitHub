@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'C:\Users\Ander\Desktop\Project\ui.ui'
+# Form implementation generated from reading ui file 'C:\Users\Ander\Documents\GitHub\HomeGitHub\ui.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.4
 #
@@ -317,7 +317,7 @@ class Ui_MainWindow(object):
         self.label_6.setGeometry(QtCore.QRect(322, 0, 100, 100))
         self.label_6.setText("")
         self.label_6.setTextFormat(QtCore.Qt.AutoText)
-        self.label_6.setPixmap(QtGui.QPixmap("C:\\Users\\Ander\\Desktop\\Project\\electronics_chip_wireless_gadget_smart_icon_229600.ico"))
+        self.label_6.setPixmap(QtGui.QPixmap("C:\\Users\\Ander\\Documents\\GitHub\\HomeGitHub\\electronics_chip_wireless_gadget_smart_icon_229600.ico"))
         self.label_6.setScaledContents(True)
         self.label_6.setAlignment(QtCore.Qt.AlignCenter)
         self.label_6.setWordWrap(False)
@@ -473,7 +473,7 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Расчет стоимости"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Calculate"))
         self.btn_1.setText(_translate("MainWindow", "1"))
         self.btn_4.setText(_translate("MainWindow", "4"))
         self.btn_7.setText(_translate("MainWindow", "7"))
@@ -485,14 +485,14 @@ class Ui_MainWindow(object):
         self.btn_6.setText(_translate("MainWindow", "6"))
         self.btn_zerro.setText(_translate("MainWindow", "0"))
         self.btn_tochka.setText(_translate("MainWindow", "."))
-        self.btn_ravno.setText(_translate("MainWindow", "Ввод"))
-        self.label.setText(_translate("MainWindow", "Введите стоимость товара"))
-        self.label_2.setText(_translate("MainWindow", "Введите срок службы в годах"))
-        self.label_3.setText(_translate("MainWindow", "В год:"))
-        self.label_4.setText(_translate("MainWindow", "В месяц:"))
-        self.label_5.setText(_translate("MainWindow", "В день:"))
-        self.clear_button.setText(_translate("MainWindow", "Очистить"))
-        self.ereise_button.setText(_translate("MainWindow", "Назад"))
+        self.btn_ravno.setText(_translate("MainWindow", "Enter"))
+        self.label.setText(_translate("MainWindow", "Enter the cost"))
+        self.label_2.setText(_translate("MainWindow", "Enter the service life in years"))
+        self.label_3.setText(_translate("MainWindow", "Per year:"))
+        self.label_4.setText(_translate("MainWindow", "Per month:"))
+        self.label_5.setText(_translate("MainWindow", "Per day:"))
+        self.clear_button.setText(_translate("MainWindow", "Clear"))
+        self.ereise_button.setText(_translate("MainWindow", "Backspace"))
 
 
 if __name__ == "__main__":

@@ -1,8 +1,8 @@
 import sys
-from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5 import QtWidgets
 from PyQt5.QtGui import QIcon
 from ui import Ui_MainWindow
-from time import sleep
+
 
 
 class MainProject(QtWidgets.QMainWindow):
@@ -13,10 +13,10 @@ class MainProject(QtWidgets.QMainWindow):
         self.init_ui()
 
     def init_ui(self):
-        #Задаем иконку главнного окна
-           # привязывание клавиши ввода для исполнения функций
+        # Setting the icon of the main window and
+        #  binding the input key to perform functions.
         self.setWindowIcon(QIcon('electronics_chip_wireless_gadget_smart_icon_229600.ico'))
-        self.ui.btn_ravno.clicked.connect(self.calculation_ear)
+        self.ui.btn_ravno.clicked.connect(self.calculation)
 
         self.ui.btn_1.clicked.connect(lambda: self.ui.lineEdit.insert('1')
                                       if self.ui.lineEdit.hasFocus() else self.ui.lineEdit_2.insert('1'))
@@ -49,23 +49,22 @@ class MainProject(QtWidgets.QMainWindow):
         self.ui.clear_button.clicked.connect(lambda: self.ui.lineEdit_4.clear())
         self.ui.clear_button.clicked.connect(lambda: self.ui.lineEdit_5.clear())
         self.ui.clear_button.clicked.connect(lambda: self.ui.lineEdit.setFocus())
-
-    def calculation_ear(self):
-            #Рассчитываем стоимость в год,месяц и день с округлением до двух знаков
-                    #и передаем значение в соответствующие поля
+    def calculation(self):
+                #We calculate the cost per year, month and day with rounding to two digits
+                #and pass the value to the appropriate fields.
             try:
                 inupt_number1 = float(self.ui.lineEdit.text())
                 inupt_number2 = int(self.ui.lineEdit_2.text())
-                stoimost_vgod = round((inupt_number1 / inupt_number2), 2)
-                stoimost_month = round((inupt_number1 / inupt_number2 / 12), 2)
-                stoimost_day = round((inupt_number1 / inupt_number2 / 365), 2)
-                self.ui.lineEdit_3.setText(str(stoimost_vgod))
-                self.ui.lineEdit_4.setText(str(stoimost_month))
-                self.ui.lineEdit_5.setText(str(stoimost_day))
+                cost_year = round((inupt_number1 / inupt_number2), 2)
+                cost_month = round((inupt_number1 / inupt_number2 / 12), 2)
+                cost_day = round((inupt_number1 / inupt_number2 / 365), 2)
+                self.ui.lineEdit_3.setText(str(cost_year))
+                self.ui.lineEdit_4.setText(str(cost_month))
+                self.ui.lineEdit_5.setText(str(cost_day))
             except ZeroDivisionError:
-                self.ui.lineEdit_3.setText('"Этого не может быть."')
+                self.ui.lineEdit_3.setText('"This is unacceptable."')
             except ValueError:
-                self.ui.lineEdit_3.setText('"Только целое число."')
+                self.ui.lineEdit_3.setText('"Only integer."')
 
 
 app = QtWidgets.QApplication([])
